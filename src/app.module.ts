@@ -14,9 +14,9 @@ dotenv.config(); // Make sure this line is present
 
 @Module({
   imports: [
-    MulterModule.register({
-      dest: './uploads', // Destination folder for storing uploaded files
-    }),
+    // MulterModule.register({
+    //   dest: './uploads', // Destination folder for storing uploaded files
+    // }),
     MongooseModule.forRoot(process.env.MONGODB_URI),
     MongooseModule.forFeature([
       { name: DestinationInfo.name, schema: DestinationSchema },
